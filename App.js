@@ -1,21 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import Model1 from './src/Model1';
 
-export default class App extends React.Component {
+const AppModel1 = createAppContainer(Model1.StackNavigator);
+
+export default class AppModel1 extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <AppModel1 />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
